@@ -40,7 +40,6 @@ payload map {
             <ee:variables>
             </ee:variables>
         </ee:transform>
-
     </flow>
     <flow name="businessLogicFlow" doc:id="759839c4-b32d-4e87-9d36-ce63694cb83c">
         <batch:job jobName="migrateProductsBatch" doc:id="5bd60a74-0002-4d70-ae4a-8211e67ae465" blockSize="${page.size}">

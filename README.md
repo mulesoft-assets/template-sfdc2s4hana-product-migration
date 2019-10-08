@@ -11,14 +11,14 @@ This template is subject to the conditions of the <a href="https://s3.amazonaws.
 <!-- Use Case (start) -->
 This Anypoint template serves as a foundation for setting an online sync of products from Salesforce to SAP S/4HANA.
 
-Use this template if would like to sync products from Salesforce to SAP S/4HANA business partners in manner of one time synchronization by browse toting the HTTP endpoint. The template will fetch all products by specified criteria and send it as to SAP S/4HANA to create/update business partner there.
+Use this template if would like to sync products from Salesforce to SAP S/4HANA products in manner of one time synchronization by browse toting the HTTP endpoint. The template will fetch all products by specified criteria and send it as to SAP S/4HANA to create/update products there.
 Requirements have been set not only to be used as examples, but also to establish a starting point to adapt your integration to your requirements.
 
 As implemented, this template leverages the Mule batch module.
 The batch job is divided into *Process* and *On Complete* stages.
 The integration is triggered by the HTTP endpoint to fetch all the Salesforce Products suitable for migration.
-Fetched products are passed to the batch as input. In the batch the business partner is fetched from SAP S/4HANA by its name.
-If it exists, its business partner identifier is resolved against SAP S/4HANA. If it doesn't exist, then new business partner number is fetched from SAP S/4HANA.
+Fetched products are passed to the batch as input. In the batch the products is fetched from SAP S/4HANA by its name.
+If it exists, its products identifier is resolved against SAP S/4HANA. If it doesn't exist, then new product number is fetched from SAP S/4HANA.
 Afterwards every such product from Salesforce is sent to SAP S/4HANA where it is asynchronously updated or created.
 Finally during the *On Complete* stage the template logs output statistics data into the console and send a notification e-mail with the results of the batch execution.
 <!-- Use Case (end) -->
@@ -221,7 +221,16 @@ This flow has Error Handling that basically consists on invoking the *On Error P
 
 ## endpoints.xml
 <!-- Default Endpoints XML (start) -->
-This file contains the endpoints for triggering the template and for retrieving the objects that meet the defined criteria in a query. You can execute a batch job process with the query results.<!-- Default Endpoints XML (end) -->
+This is the file where you will found the inbound and outbound sides of your integration app.
+This Template has a [HTTP Listener Connector](https://docs.mulesoft.com/connectors/http/http-listener-ref) as the way to trigger the use case.
+​
+*** Trigger Flow
+**HTTP Listener Connector** - Start Report Generation
+​
++ `${http.port}` is set as a property to be defined either on a property file or in CloudHub environment variables.
++ The path configured by default is `migrateproducts` and you are free to change for the one you prefer.
++ The host name for all endpoints in your CloudHub configuration should be defined as `localhost`. CloudHub will then route requests from your application domain URL to the endpoint.
+​<!-- Default Endpoints XML (end) -->
 
 <!-- Endpoints XML (start) -->
 
