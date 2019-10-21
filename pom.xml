@@ -109,4 +109,4 @@
         </repository>
     </repositories>
 
-</project>
+<scm><connection>scm:git:git@github.com:mulesoft/template-sfdc2s4hana-product-migration.git</connection><developerConnection>scm:git:git@github.com:mulesoft/template-sfdc2s4hana-product-migration.git</developerConnection><url>https://github.com/mulesoft/template-sfdc2s4hana-product-migration</url><tag>HEAD</tag></scm></project>
