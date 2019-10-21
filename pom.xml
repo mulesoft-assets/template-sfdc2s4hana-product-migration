@@ -7,7 +7,7 @@
         <version>2.1.22</version>
     </parent>
     <artifactId>template-sfdc2s4hana-product-migration</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1-SNAPSHOT</version>
     <packaging>mule-application</packaging>
 
     <name>template-sfdc2s4hana-product-migration</name>
@@ -109,4 +109,4 @@
         </repository>
     </repositories>
 
-<scm><connection>scm:git:git@github.com:mulesoft/template-sfdc2s4hana-product-migration.git</connection><developerConnection>scm:git:git@github.com:mulesoft/template-sfdc2s4hana-product-migration.git</developerConnection><url>https://github.com/mulesoft/template-sfdc2s4hana-product-migration</url><tag>v2.1.0</tag></scm></project>
+<scm><connection>scm:git:git@github.com:mulesoft/template-sfdc2s4hana-product-migration.git</connection><developerConnection>scm:git:git@github.com:mulesoft/template-sfdc2s4hana-product-migration.git</developerConnection><url>https://github.com/mulesoft/template-sfdc2s4hana-product-migration</url><tag>HEAD</tag></scm></project>
